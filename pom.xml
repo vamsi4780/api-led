@@ -25,6 +25,20 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				 <cloudHubDeployment>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <muleVersion>4.3.0</muleVersion>
+      <username>Vamsi478</username>
+      <password>Vamsi478</password>
+      <applicationName>test-sfdc-sys-api1</applicationName>
+      <environment>Sandbox</environment>
+      <region>eu-central-1</region>
+      <workers>1</workers>
+      <workerType>Micro</workerType>
+      <properties>
+        <key>value</key>
+      </properties>
+    </cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
