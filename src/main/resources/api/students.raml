@@ -1,0 +1,32 @@
+#%RAML 1.0
+title: studentS
+
+/studentsapi:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+               {
+                  "firstname": "vamsi",
+                  "lastname": "dhare reddy",
+                  "studentid": 1,
+                  "phonenumber":+76739,
+                  "address":"hyd",
+                  "height": 5.6,
+                  "weight":75,
+                  "company name": "tcl",
+                  "company address": "bng",
+                  "company id":100,
+                  "siblings": "sister and brother",
+                  "email id": "lvdr@gmail.com"
+            }
+      400:
+        body:
+          application/json:
+                 example:
+                   {
+                     "message": "not found"
+                   }
+                                  

@@ -1,0 +1,13 @@
+    {
+	"studentName":"vamsi",
+	"studentId":"studentid",
+	"mobileNumber": "phonenumberc",
+	"location": "addressc",
+	"height": "heightc",
+	"weight": "weightc",
+	"companyName": "company_namec",
+	"companyLocation": "company_addressc",
+	"companyId": "companyid",
+	"siblings": "siblingsc",
+	"email": "emailc"
+	}

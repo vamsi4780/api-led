@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="sys" format="json">
+      <types:shape format="weave" example="examples/new sys.json"><![CDATA[%dw 2.0
+
+type sys = {|
+  firstname: String, 
+  lastname: String, 
+  studentid: Number {"typeId": "int"}, 
+  phonenumber: Number {"typeId": "int"}, 
+  address: String, 
+  height: Number {"typeId": "double"}, 
+  weight: Number {"typeId": "int"}, 
+  "company name": String, 
+  "company address": String, 
+  "company id": Number {"typeId": "int"}, 
+  siblings: String, 
+  "email id": String
+|} {"example": "{\\\"firstname\\\":\\\"vamsi\\\",\\\"lastname\\\":\\\"dhare reddy\\\",\\\"studentid\\\":1,\\\"phonenumber\\\":76739,\\\"address\\\":\\\"hyd\\\",\\\"height\\\":5.6,\\\"weight\\\":75,\\\"company name\\\":\\\"tcl\\\",\\\"company address\\\":\\\"bng\\\",\\\"company id\\\":100,\\\"siblings\\\":\\\"sister and brother\\\",\\\"email id\\\":\\\"lvdr@gmail.com\\\"}"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="json" format="json">
+      <types:shape format="weave" example="examples/new git.json"><![CDATA[%dw 2.0
+
+type json = {|
+  studentName: String, 
+  studentId: String, 
+  mobileNumber: String, 
+  location: String, 
+  height: String, 
+  weight: String, 
+  companyName: String, 
+  companyLocation: String, 
+  companyId: String, 
+  siblings: String, 
+  email: String
+|} {"example": "{\\\"studentName\\\":\\\"vamsi\\\",\\\"studentId\\\":\\\"studentid\\\",\\\"mobileNumber\\\":\\\"phonenumberc\\\",\\\"location\\\":\\\"addressc\\\",\\\"height\\\":\\\"heightc\\\",\\\"weight\\\":\\\"weightc\\\",\\\"companyName\\\":\\\"company_namec\\\",\\\"companyLocation\\\":\\\"company_addressc\\\",\\\"companyId\\\":\\\"companyid\\\",\\\"siblings\\\":\\\"siblingsc\\\",\\\"email\\\":\\\"emailc\\\"}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#01ab2846-14a9-4fad-9d18-401576a57d8c">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="json"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
